@@ -10,13 +10,13 @@ const AddEmployee = ({ onEmployeeAdded }) => {
   const [phone, setPhone] = useState("");
   const [company, setCompany] = useState("");
   const [priority, setPriority] = useState("High"); // Default priority
-
+ const URL="https://employee-tqa0.onrender.com";
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const response = await axios.post(
-        `${window.location.origin}/api/v1/employee/add`,
+        `${URL}/api/v1/employee/add`,
         {
           first_name: firstName,
           last_name: lastName,
