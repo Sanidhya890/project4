@@ -5,12 +5,12 @@ import Card from "@/app/Components/Card.js";
 
 const DisplayAll = () => {
   const [employees, setEmployees] = useState([]);
-
+ const URL="https://employee-tqa0.onrender.com";
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-        `${window.location.origin}/api/v1/employee/all`
+        `${URL}/api/v1/employee/all`
         );
         // Assuming the API response data is an object with 'employees' array
         if (response.data.status && Array.isArray(response.data.employees)) {
