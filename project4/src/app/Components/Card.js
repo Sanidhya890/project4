@@ -3,7 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const Card = ({ employee }) => {
-  const URL="https://employee-tqa0.onrender.com/";
+  const URL="https://employee-tqa0.onrender.com";
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
