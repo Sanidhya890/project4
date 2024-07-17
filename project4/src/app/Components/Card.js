@@ -3,10 +3,11 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 const Card = ({ employee }) => {
+  const URL="https://employee-tqa0.onrender.com/";
   const handleDelete = async () => {
     try {
       const response = await axios.delete(
-        `${window.location.origin}/api/v1/employee/delete/${employee._id}`
+        `${URL}/api/v1/employee/delete/${employee._id}`
       );
       window.location.reload();
     //   if (response.data.status) {
