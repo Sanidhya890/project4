@@ -16,7 +16,7 @@ const AddEmployee = ({ onEmployeeAdded }) => {
 
     try {
       const response = await axios.post(
-        `https://employee-tqa0.onrender.com/api/v1/employee/add`,
+        `http://localhost:4000/api/v1/employee/add`,
         {
           first_name: firstName,
           last_name: lastName,
@@ -181,4 +181,3 @@ const AddEmployee = ({ onEmployeeAdded }) => {
 };
 
 export default AddEmployee;
-
